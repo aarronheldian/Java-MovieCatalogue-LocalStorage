@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MovieActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_photo"
+            android:layout_width="150dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/img_cover"
+            android:scaleType="centerInside"
+            android:src="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:maxLines="3"
+            android:text="@string/tv_judul"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_popularity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:text="@string/tv_ph"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_pop"
+            app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
+
+        <TextView
+            android:id="@+id/tv_tanggal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_popularity"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:text="@string/tv_tanggal"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_popularity" />
+
+        <ImageView
+            android:id="@+id/img_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tanggal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:contentDescription="@string/img_rating"
+            android:src="@drawable/ic_remove_red_eye_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/img_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
+
+        <ImageView
+            android:id="@+id/img_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tanggal"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:contentDescription="@string/img_rating"
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/img_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_star"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/img_photo"
+            android:gravity="center"
+            android:text="@string/tv_rating"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/img_star"
+            app:layout_constraintStart_toStartOf="@+id/img_star"
+            app:layout_constraintTop_toBottomOf="@+id/img_star" />
+
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tanggal"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@id/img_star"
+            android:contentDescription="@string/img_time"
+            android:src="@drawable/ic_language_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/img_star"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_time"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/img_star"
+            android:gravity="center"
+            android:text="@string/tv_waktu"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/img_time"
+            app:layout_constraintStart_toStartOf="@+id/img_time"
+            app:layout_constraintTop_toBottomOf="@+id/img_time" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/submit"
+            app:layout_constraintStart_toEndOf="@+id/img_photo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_photo"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/tv_overview"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_photo" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_deskripsi_judul"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="#EEEFF4"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="8dp"
+            android:text="@string/tv_overview"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi_judul" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

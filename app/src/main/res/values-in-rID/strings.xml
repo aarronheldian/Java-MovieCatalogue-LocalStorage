@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Netflux</string>
+    <string name="title_movie">Film</string>
+    <string name="title_tv">Acara TV</string>
+    <string name="tv_judul">Judul</string>
+    <string name="tv_ph">RP</string>
+    <string name="tv_tanggal">Tanggal</string>
+    <string name="tv_overview">Sinopsis</string>
+    <string name="img_cover">Cover</string>
+    <string name="img_rating">Rating</string>
+    <string name="tv_rating">Rating</string>
+    <string name="change_language_settings">Ubah Bahasa</string>
+    <string name="img_time">time</string>
+    <string name="tv_waktu">time</string>
+    <string name="id_bahasa">id-ID</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_movie">Film Kesukaan</string>
+    <string name="favorite_tv">Film Kesukaan</string>
+    <string name="submit">Tambahkan ke Favorit</string>
+    <string name="delete">Hapus</string>
+    <string name="dialog_messgae">Apakah anda yakin ingin menghapus item ini?</string>
+    <string name="hapus_message">Hapus</string>
+</resources>
